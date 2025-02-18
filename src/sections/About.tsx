@@ -87,46 +87,48 @@ export const AboutSection = () => {
 
         {/* Section with Beyond the Code and Map Cards */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-8">
-          {/* Beyond the Code Card */}
-          <div className="col-span-1 md:col-span-3">
-            <Card className="h-[320px] p-0 flex flex-col">
-              <div className="flex flex-col px-6 pt-6">
-                <div className="inline-flex items-center gap-2">
-                  <StarIcon className="size-9 text-emerald-300" />
-                  <h3 className="font-serif text-3xl mb-2">Beyond the Code</h3>
-                </div>
-                <p className="text-sm text-white/60 mt-2 mb-6">
-                 more informations about me
-                </p>
-              </div>
-              <div className="relative flex-1">
-                {hobbies.map((hobby) => (
-                  
-                  <motion.div
-                    key={hobby.title}
-                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
-                    style={{
-                      left: hobby.left,
-                      top: hobby.top,
-                    }}
-                    drag
-  
-                  >
-                    <span className="font-medium text-gray-950">{hobby.title}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </Card>
-          </div>
+    {/* Beyond the Code Card */}
+<div className="col-span-1 md:col-span-3">
+  <Card className="h-auto p-0 flex flex-col">
+    <div className="flex flex-col px-6 pt-6">
+      <div className="inline-flex items-center gap-2">
+        <StarIcon className="size-9 text-emerald-300" />
+        <h3 className="font-serif text-3xl mb-2">Beyond the Code</h3>
+      </div>
+      <p className="text-sm text-white/60 mt-2 mb-6">
+        More information about me
+      </p>
+    </div>
+    
+    {/* Hobbies Section */}
+    <div className="flex flex-wrap justify-center gap-4 px-6 py-4">
+      {hobbies.map((hobby) => (
+        <motion.div
+          key={hobby.title}
+          className="inline-flex items-center justify-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 mb-4"
+          drag
+        >
+          <span className="font-medium text-gray-950">{hobby.title}</span>
+        </motion.div>
+      ))}
+    </div>
+  </Card>
+</div>
+
 
           {/* Map Card */}
           <div className="col-span-1 md:col-span-2">
-            <Card className="h-[320px] p-0 relative">
-              <div className="">
-                <Image className="h-full w-full object-cover object-left-top" src={mapImage} alt="map" />
-              </div>
-            </Card>
-          </div>
+  <Card className="h-[320px] p-0 relative">
+    <div className="w-full h-full overflow-hidden">
+      <Image 
+        className="object-cover w-full h-full" 
+        src={mapImage} 
+        alt="map" 
+      />
+    </div>
+  </Card>
+</div>
+
         </div>
       </div>
     </div>

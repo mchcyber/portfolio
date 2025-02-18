@@ -2,7 +2,3 @@
   command = "npm run build"
   publish = "out"
 
-[[redirects]]
-  from = "/service-worker.js"
-  to = "/service-worker.js"
-  status = 200
