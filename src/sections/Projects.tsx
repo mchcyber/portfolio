@@ -65,7 +65,7 @@ const portfolioProjects = [
     results: [
       { title: "Simple weather web app using react" },
     ],
-    link: "https://reliable-salamander-78fcf3.netlify.app/",
+    link: "https://incomparable-hummingbird-c15bf5.netlify.app/",
     image: weatherApp,
   },
 ];
