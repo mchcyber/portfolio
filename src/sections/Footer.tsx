@@ -3,7 +3,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 const footerLinks = [
   {
     title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/aze', // Correct LinkedIn URL
+    href: 'https://www.linkedin.com/in/mohammed-charef-2a1b00224/', // Correct LinkedIn URL
   },
   {
     title: 'GitHub',
